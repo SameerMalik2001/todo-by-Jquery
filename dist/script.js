@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let nameList = ['bg1.avif','bg2.jpg','bg3.avif','bg4.jpg','bg5.jpg','bg6.jpg']
   let name = nameList[parseInt(Math.random() * nameList.length)]
-  $('.main1').css('background-image',`linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url("../dist/assets/${name}")`)
+  $('.main1').css('background-image',`linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url("./assets/${name}")`)
 
   
   $("#myForm").on("submit", function (e) {
