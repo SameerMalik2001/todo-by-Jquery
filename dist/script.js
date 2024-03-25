@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  let nameList = ['bg1.avif','bg2.jpg','bg3.avif','bg4.jpg','bg5.jpg','bg6.jpg']
-  let name = nameList[parseInt(Math.random() * nameList.length)]
-  $('.main1').css('background-image',`linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url("./assets/${name}")`)
-
   
   $("#myForm").on("submit", function (e) {
     e.preventDefault();
@@ -63,9 +59,9 @@ $(document).ready(function () {
     }
 
     $('.main1').append(`
-    <div class="boxWithRadio w-[50%] min-h-[50px] flex justify-between items-center bg-[#496989] rounded-md overflow-hidden">
+    <div class="boxWithRadio w-[50%] min-h-[50px] flex justify-between items-center bg-[#000000] rounded-md overflow-hidden">
 
-      <div class="radioBtn bg-[#496989] rounded-tl-md rounded-bl-md w-[10%] flex justify-center items-center">
+      <div class="radioBtn rounded-tl-md rounded-bl-md w-[10%] flex justify-center items-center">
           <div onclick=radioClicked(this.parentNode.parentNode) class="radio w-[20px] h-[20px] rounded-full bg-white"></div>
           <img onclick=radioClicked(this.parentNode.parentNode) class=" img w-[20px] h-[20px] bg-cover hidden" src="./assets/check.png" alt="">
       </div>
@@ -73,7 +69,7 @@ $(document).ready(function () {
       <div class="boxes w-[90%] min-h-[50px] flex justify-between items-center" style="background-color: #${color};">
     
           <p class="todoText text-xl text-white font-semibold ml-2 w-[500px] break-all">${todo}</p>
-          <input class="inputEdit bg-[#96d188] outline-none text-xl hidden h-[45px] w-[70%] border-2 rounded-md" type="text" name="Input2">
+          <input class="inputEdit bg-[#444444] px-3 outline-none text-xl hidden h-[45px] w-[70%] border-2 rounded-md" type="text" name="Input2">
           <div class="flex justify-center items-center">
               <button onclick=editTodo(this.parentNode.parentNode) class="edit bg-black mr-2 h-[35px] pl-2 pr-2 rounded-[5px]">Edit</button>
               <button onclick=saveTodo(this.parentNode.parentNode) class="save bg-black mr-2 h-[35px] pl-2 pr-2 rounded-[5px] hidden">Save</button>

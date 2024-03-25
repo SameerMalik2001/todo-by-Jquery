@@ -16,6 +16,7 @@
     min-height: calc(100% - 100px);
     /* background-repeat: no-repeat; */
     /* background-position: center; */
+    background-image: linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url("../dist/assets/bg5.jpg");
     background-size: contain;
   }
 }
