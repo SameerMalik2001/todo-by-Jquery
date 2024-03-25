@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./assets/flat.png" type="image/x-icon">
+    <title>Todo | jquery</title>
+</head>
+<body class="text-[#E2F4C5] h-screen w-screen">
+    <div class="main w-[100%] h-[100%]">
+
+        <div class="nav h-[100px] w-[100%] bg-[#496989] flex justify-center items-center">
+            <p class="text-3xl ">TODO by JQuery</p>
+        </div>
+
+        <div class="main1 w-[100%] flex flex-col justify-start items-center gap-5">
+            <form id="myForm" class="w-[50%] h-[50px] flex justify-center items-center mt-5">
+                <input class="textInput w-[90%] h-[100%] pl-2 text-black text-2xl outline-none rounded-tl-[10px] rounded-bl-[10px]" placeholder="create a todo..." type="text" name="Input" id="InputText">
+                <input class="w-[80px] h-[100%] bg-black rounded-tr-[10px] rounded-br-[10px] flex-shrink-0" type="submit" value="Submit">
+            </form>
+
+            
+
+        </div>
+        
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <div class="boxWithRadio w-[50%] h-[50px] flex justify-between items-center">
+
+    <div class="radioBtn bg-[#496989] rounded-tl-md rounded-bl-md w-[10%] h-[50px] flex justify-center items-center">
+        <div class="radio w-[20px] h-[20px] rounded-full bg-white"></div>
+        <img class="w-[20px] h-[20px] bg-cover hidden" src="./check.png" alt="">
+    </div>
+
+    <div class="boxes w-[90%] h-[50px] rounded-tr-md rounded-br-md bg-[#A8CD9F] flex justify-between items-center">
+        <p class="text-xl text-white font-semibold capitalize ml-2">this is the work</p>
+        <input class="bg-[#96d188] outline-none text-xl hidden h-[45px] w-[70%] border-2 rounded-md" type="text" value="hii" name="Input2">
+        <div class="flex justify-center items-center">
+            <button class="bg-black mr-2 h-[35px] pl-2 pr-2 rounded-[5px]">Edit</button>
+            <button class="bg-black mr-2 h-[35px] pl-2 pr-2 rounded-[5px] hidden">Save</button>
+            <button class="bg-black mr-2 h-[35px] pl-2 pr-2 rounded-[5px]">Delete</button>
+        </div>
+    </div>
+</div> -->
