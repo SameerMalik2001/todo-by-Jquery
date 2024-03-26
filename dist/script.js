@@ -1,4 +1,23 @@
 $(document).ready(function () {
+
+
+  gsap.from($('.nav')[0], {
+    y: -100,
+    duration: 0.5,
+    ease: "power1.inOut",
+    opacity: 0
+  })
+
+  gsap.from($('#myForm')[0], {
+    y: 300,
+    duration: 1,
+    ease: "power1.inOut",
+    delay: 0.5,
+    opacity: 0
+  })
+
+  
+  
   
   $("#myForm").on("submit", function (e) {
     e.preventDefault();
@@ -7,12 +26,15 @@ $(document).ready(function () {
     let todo = Input.substring(6, Input.length);
     $(".textInput").val("");
     if (todo.trim().length > 0) {
-    
+
+      
+      
       let colorList = ['7f5539','9c6644','b08968','ddb892','e6ccb2','212529','343a40','495057','6c757d','590d22',
       '800f2f','a4133c','c9184a','ff4d6d','718355','87986a','2dc653','208b3a','1a7431','155d27','10451d','76520e',
       'b69121','c9a227','edc531','fad643','ffe169','709775','415d43','111d13','fbc3bc','f38375','f7a399','ef6351',
       '3dccc7','07beb8','ffb3c6','ff8fab','fb6f92','97a97c','97a97c','00406c','3c0663','3c0663','4a0a77','ab51e3',
       '6818a5','1efc1e']
+      
       let color = colorList[parseInt(Math.random() * colorList.length)]
 
 
@@ -20,18 +42,23 @@ $(document).ready(function () {
         if($(element).find(".radio").hasClass("hidden") === false) {
           $(element).find('.radio').addClass('hidden')
           $(element).find('.img').removeClass('hidden')
-          $(element).find('.todoText').addClass('line-through text-green-600')
+          $(element).find('.todoText').addClass('line-through')
+          $(element).find('.todoText').animate({opacity:0.6})
           $(element).find('.todoText').removeClass('text-white')
         } else if ($(element).find(".radio").hasClass("hidden") === true){
           $(element).find('.radio').removeClass('hidden')
           $(element).find('.img').addClass('hidden')
-          $(element).find('.todoText').removeClass('line-through text-green-600')
+          $(element).find('.todoText').removeClass('line-through')
+          $(element).find('.todoText').animate({opacity:1})
           $(element).find('.todoText').addClass('text-white')
         }
       }
 
       window.deleteTodo = (element) => {
-        $(element).remove();
+        $(element).hide(500)
+        setTimeout(() => {
+          $(element).remove();
+        }, 500);
       }
 
       window.editTodo = (element) => {
@@ -39,7 +66,8 @@ $(document).ready(function () {
           let todoText = $(element).find('.todoText').text()
           $(element).find('.todoText').addClass('hidden')
           $(element).find('.edit').addClass('hidden')
-          $(element).find('.inputEdit').removeClass('hidden')
+          // $(element).find('.inputEdit').removeClass('hidden')
+          $(element).find('.inputEdit').toggle(600)
           $(element).find('.save').removeClass('hidden')
           $(element).find('.inputEdit').val(todoText)
         }
@@ -53,7 +81,8 @@ $(document).ready(function () {
 
           $(element).find('.todoText').removeClass('hidden')
           $(element).find('.edit').removeClass('hidden')
-          $(element).find('.inputEdit').addClass('hidden')
+          // $(element).find('.inputEdit').addClass('hidden')
+          $(element).find('.inputEdit').toggle(0)
           $(element).find('.save').addClass('hidden')
           $(element).find('.todoText').text(todo)
         }
@@ -80,6 +109,15 @@ $(document).ready(function () {
         </div>
     
       </div>`)
+
+      console.log()
+      let a = $('.boxWithRadio')
+      gsap.from(a[a.length-1], {
+        y: 50,
+        duration: 1,
+        ease: "power1.inOut",
+        opacity: 0
+      })
     } else {
       alert("Please write a meaningful todo...")
     }

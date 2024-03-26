@@ -765,11 +765,6 @@ video {
   padding-right: 0.75rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -806,11 +801,6 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-green-600 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -834,13 +824,13 @@ video {
 
   body {
     font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url('./assets/bg5.jpg');
   }
 
   .main1 {
     min-height: calc(100% - 100px);
     /* background-repeat: no-repeat; */
     background-position: center;
-    background-image: linear-gradient(rgba(27, 31, 81, 0.505), rgba(36, 35, 78, 0.495)), url('./assets/bg5.jpg');
     background-size: contain;
   }
 }
